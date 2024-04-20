@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="{{ url_for('static', filename='admins.css') }}" rel="stylesheet" type="text/css"/>
+    <title>Deanship</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <link href="static/Uni.png" rel="icon" type="image/png"/>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="static/Uni.png">
+
+                    <h2>شؤون <span class="danger">الطلاب</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="" >
+                    <span class="material-icons-sharp">
+                        map
+                    </span>
+                    <h3>الملفات المعتمدة</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        build
+                    </span>
+                    <h3>اداة بناء الملفات
+                    </h3>
+                </a>
+                <a href= ""  class="active">
+                    <span class="material-icons-sharp">
+                        dashboard 
+                    </span>
+                    <h3>جدول الاجتماعات</h3>
+                </a>
+
+
+
+                <a href="{{ url_for('dashboard') }}">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>تسجيل الخروج</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+            <!-- Main Content -->
+            <main>
+                <h1>  التخطيط والجودة </h1>
+                <h1>الطلبات</h1>
+                 <!-- Analyses -->
+                 <div class="analyse">
+                    <div class="sales">
+                        <div class="status">
+                            <div class="info">
+                                
+                                <h1>اعتماد الملفات
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+             
+             
+                        <div class="visits">
+                            <div class="status">
+                                <div class="info">
+                                    
+                                    <h1>اعتماد الخطط التنفيذية
+                                    </h1>
+                                </div>
+                            </div>
+                        </div> 
+                 
+                 
+             
+                            <div class="searches">
+                                <div class="status">
+                                    <div class="info">
+                                        
+                                        <h1>رفع اقتراح فكرة
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                </div>
+    
+</main>
+            <!-- End of Main Content -->
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <h1>اهلا, <b>العنود</b></h1>
+                        <h2 class="text-muted">رئيس</small>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    
+                    <h2>العنود الفيفي</h2>
+                    <h3>التخطيط و الجودة</h3>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+ 
+      
+        
+        
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

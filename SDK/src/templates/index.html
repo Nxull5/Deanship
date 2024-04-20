@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link href="static/Uni.png" rel="icon" type="image/png"/>
+
+        <title>Deanship</title>
+</head>
+
+<body>
+
+
+
+    <div class="container" id="container">
+        <!-- Form container for login -->
+        <div class="form-container sign-in">
+            <form method="POST" action="{{ url_for('index') }}">
+     
+                <h1>سجل دخولك</h1>
+                <div class="social-icons">
+                    <!-- Add your social icons if needed -->
+                </div>
+                <span>استخدم اسم المستخم و كلمة المرور</span>
+                <input type="text" name="email" placeholder="اسم المستخم" required>
+                <input type="password" name="password" placeholder="كلمة المرور" required>
+                <a href="#">نسيت كلمة المرور ؟</a>
+                <button type="submit" name="login_submit">سجل الدخول</button>
+            </form>
+        </div>
+        <!-- Form container for signup -->
+        <div class="form-container sign-up">
+            <form method="POST" action="{{ url_for('index') }}">
+        
+                <h1>انشاء حساب</h1>
+                <div class="social-icons">
+                    <!-- Add your social icons if needed -->
+                </div>
+                <span>انشاء حساب للتسجيل الدخول </span>
+                <input type="text" name="first_name" placeholder="الاسم الأول" required>
+                <input type="text" name="last_name" placeholder="الاسم الأخير" required>
+                <input type="email" name="email" placeholder="اسم المستخم" required>
+                <input type="password" name="password" placeholder="كلمة المرور" required>
+
+                <button type="submit" name="signup_submit">انشاء حساب</button>
+            </form>
+        </div>
+        <!-- Toggle container -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <!-- Toggle button to switch between login and signup sections -->
+                <div class="toggle-panel toggle-left">
+                    <h1>اهلا و سهلا  </h1>
+                    <p>ادخل معلوماتك للتجسيل الدخول</p>
+                    <button class="hidden" id="login">الأدارات</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>اهلا و سهلا</h1>
+                    <p>ادخل معلوماتك للتجسيل الدخول</p>
+                    <button class="hidden" id="register">الأنشطة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
+
+</body>
+
+</html>
